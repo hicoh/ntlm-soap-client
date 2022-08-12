@@ -1,5 +1,5 @@
 {
-    "name": "matejsvajger/ntlm-soap-client",
+    "name": "jliagre-a/ntlm-soap-client",
     "type": "library",
     "description": "PHP WDSL/Soap Client with NTLM Authentication for Microsoft Dynamics NAT Server.",
     "keywords": [
@@ -17,8 +17,8 @@
         }
     ],
     "require": {
-        "php": "~5.6|~7.0",
-        "symfony/console": "^3.1"
+        "php": ">=8.1",
+        "symfony/console": "~4.4.0"
     },
     "require-dev": {
         "phpunit/phpunit" : "~4.0||~5.0",

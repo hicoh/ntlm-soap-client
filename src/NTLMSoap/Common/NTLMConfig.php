@@ -4,7 +4,7 @@ namespace matejsvajger\NTLMSoap\Common;
 
 use matejsvajger\NTLMSoap\Exception\RequiredConfigMissingException;
 
-class NTLMConfig implements \Serializable, \Iterator
+class NTLMConfig
 {
     private $parameters = [];
 
@@ -76,14 +76,14 @@ class NTLMConfig implements \Serializable, \Iterator
         return $this->parameters[$param];
     }
 
-    public function serialize()
+    public function __serialize()
     {
         return serialize([
             'parameters' => $this->parameters
         ]);
     }
 
-    public function unserialize($data)
+    public function __unserialize($data)
     {
         $data = unserialize($data);
         $this->parameters = $data['parameters'];
